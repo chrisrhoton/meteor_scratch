@@ -1,0 +1,18 @@
+<body>
+  <div class="container">
+  <header>
+    {{#if currentUser}}
+    <h1>Pending Requests ({{pendingCount}})</h1>
+    {{/if}}
+
+    {{> loginButtons align="right"}}
+  </header>
+    {{#if currentUser}}
+    <ul>
+      {{#each transactions}}
+        {{> transaction}}
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</body>
